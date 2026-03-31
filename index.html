@@ -250,11 +250,18 @@
     @media (max-width: 768px) {
       .proof-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
+        gap: 24px 12px;
+        padding: 0 16px;
       }
 
       .proof-item {
         border-right: none;
+        padding: 0 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
       }
     }
 
@@ -885,12 +892,13 @@
           <div class="mt-10 mb-6">
             <p class="text-slate-900 font-extrabold text-xl mb-4">Faça uma reserva com a LivIA agora mesmo!!!</p>
             <div class="flex gap-2 sm:gap-4">
-              <a href="https://app.iareserva.com.br/iareserva" 
+              <a href="https://app.iareserva.com.br/iareserva"
                 class="btn-hero-primary !px-4 sm:!px-8 !py-3 sm:!py-4 text-center text-xs sm:text-base flex-1 sm:flex-initial whitespace-nowrap">
                 Pela Web
               </a>
               <a href="https://wa.me/5511911135517?text=Olá,%20quero%20realizar%20uma%20reserva."
-                class="btn-hero-primary !bg-[#25D366] hover:!bg-[#128C7E] !px-4 sm:!px-8 !py-3 sm:!py-4 text-center text-xs sm:text-base flex-1 sm:flex-initial flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap" target="_blank">
+                class="btn-hero-primary !bg-[#25D366] hover:!bg-[#128C7E] !px-4 sm:!px-8 !py-3 sm:!py-4 text-center text-xs sm:text-base flex-1 sm:flex-initial flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap"
+                target="_blank">
                 <i class="fa-brands fa-whatsapp"></i> Por Whatsapp
               </a>
             </div>
@@ -1154,7 +1162,7 @@
             </div>
             <div class="space-y-4">
               <div class="flex justify-between text-sm items-center p-3 bg-slate-50 rounded-lg">
-                <span class="text-slate-600 font-medium">Hostess</span>
+                <span class="text-slate-600 font-medium">Colaborador</span>
                 <span class="font-mono text-brand font-bold">- R$ 2.500,00</span>
               </div>
               <div class="flex justify-between text-sm items-center p-3 bg-slate-50 rounded-lg">
