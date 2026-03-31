@@ -580,7 +580,10 @@
     .pixel-section::before {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background-image: radial-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px);
       background-size: 40px 40px;
       opacity: 0.5;
@@ -717,9 +720,11 @@
       .pixel-features {
         grid-template-columns: 1fr;
       }
+
       .pixel-header h2 {
         font-size: 2.2rem;
       }
+
       .pixel-agency-box {
         flex-direction: column;
         text-align: center;
@@ -796,6 +801,34 @@
       font-size: 0.95rem;
       margin: 0;
     }
+
+    /* Botão Flutuante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #128C7E;
+      transform: scale(1.1);
+      color: #FFF;
+      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
 
@@ -814,7 +847,8 @@
         <a href="#depoimentos" class="text-slate-600 hover:text-brand transition text-sm font-medium">Depoimentos</a>
         <a href="#faq" class="text-slate-600 hover:text-brand transition text-sm font-medium">FAQ</a>
       </div>
-      <a href="#contato" class="btn-primary px-6 py-2.5 rounded-full font-bold text-sm">
+      <a href="https://wa.me/5511988724201?text=Olá,%20gostaria%20de%20agendar%20uma%20demonstração."
+        class="btn-primary px-6 py-2.5 rounded-full font-bold text-sm" target="_blank">
         Agendar Demo
       </a>
     </div>
@@ -848,14 +882,20 @@
             entende seu restaurante.
           </p>
 
-          <div class="hero-ctas">
-            <a href="https://app.iareserva.com.br/iareserva" class="btn-hero-primary">
-              Falar com a LivIA agora →
-            </a>
-            <a href="#contato" class="btn-hero-secondary">
-              ou agendar uma demonstração
-            </a>
+          <div class="mt-10 mb-6">
+            <p class="text-slate-900 font-extrabold text-xl mb-4">Faça uma reserva com a LivIA agora mesmo!!!</p>
+            <div class="flex flex-wrap gap-4">
+              <a href="https://app.iareserva.com.br/iareserva" class="btn-hero-primary">
+                Pela Web
+              </a>
+              <a href="https://wa.me/5511911135517?text=Olá,%20quero%20realizar%20uma%20reserva."
+                class="btn-hero-primary !bg-[#25D366] hover:!bg-[#128C7E] flex items-center gap-2" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Por Whatsapp
+              </a>
+            </div>
           </div>
+
+
 
           <div class="urgency-banner">
             ⏰ Oferta especial para os <strong>100 primeiros restaurantes</strong>
@@ -865,7 +905,8 @@
         </div>
 
         <div class="lg:w-7/12 flex items-end justify-center">
-          <img src="ia%20reserva.png" alt="IA Reserva" class="w-full max-w-[1600px] h-auto scale-125 origin-bottom transform transition-all block">
+          <img src="ia%20reserva.png" alt="IA Reserva"
+            class="w-full max-w-[1600px] h-auto scale-125 origin-bottom transform transition-all block">
         </div>
       </div>
     </div>
@@ -1296,7 +1337,9 @@
   <section id="depoimentos" class="testimonials-section">
     <div class="testimonials-container">
 
-      <h2>O que donos de restaurante dizem</h2>
+      <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Dores que removemos do seu dia a dia</h2>
+      <p class="text-slate-500 text-lg max-w-2xl mx-auto">Histórias reais de quem recuperou o controle da operação e
+        parou de perder mesas. O próximo depoimento de sucesso pode ser o do seu restaurante.</p>
 
       <div class="testimonials-grid">
 
@@ -1310,8 +1353,8 @@
           <div class="testimonial-author">
             <div class="author-avatar">JM</div>
             <div>
-              <strong>João Menezes</strong>
-              <span>Dono — Restaurante Varanda, São Paulo</span>
+              <strong>João M.</strong>
+              <span>Dono de Restaurante</span>
             </div>
           </div>
         </div>
@@ -1326,8 +1369,8 @@
           <div class="testimonial-author">
             <div class="author-avatar">ML</div>
             <div>
-              <strong>Maria Lima</strong>
-              <span>Gerente — Bistrô Raízes, Curitiba</span>
+              <strong>Maria L.</strong>
+              <span>Gerente Operacional</span>
             </div>
           </div>
         </div>
@@ -1342,8 +1385,8 @@
           <div class="testimonial-author">
             <div class="author-avatar">RS</div>
             <div>
-              <strong>Rafael Souza</strong>
-              <span>Proprietário — Casa do Chef, Belo Horizonte</span>
+              <strong>Rafael S.</strong>
+              <span>Proprietário de Restaurante</span>
             </div>
           </div>
         </div>
@@ -1600,7 +1643,7 @@
         <span class="pixel-badge">Vantagem Exclusiva</span>
         <h2>Pixel de Rastreamento.<br><span class="text-brand">Sua agência vai adorar.</span></h2>
         <p>
-          Feche o ciclo do seu marketing. Do primeiro anúncio à reserva confirmada na sua mesa, 
+          Feche o ciclo do seu marketing. Do primeiro anúncio à reserva confirmada na sua mesa,
           tudo mapeado com dados reais e precisos.
         </p>
       </div>
@@ -1615,7 +1658,7 @@
           <div>
             <h4>Visitantes da página</h4>
             <p>
-              Saiba exatamente quem acessou sua página, em qual horário e de qual origem. 
+              Saiba exatamente quem acessou sua página, em qual horário e de qual origem.
               Mapeie o tráfego do Instagram, Google e links diretos.
             </p>
           </div>
@@ -1629,7 +1672,7 @@
           <div>
             <h4>Conversões Reais</h4>
             <p>
-              O pixel dispara quando a reserva é confirmada. Sem estimativas. 
+              O pixel dispara quando a reserva é confirmada. Sem estimativas.
               Alimente as IAs do Meta e Google com conversões verdadeiras.
             </p>
           </div>
@@ -1643,7 +1686,7 @@
           <div>
             <h4>Remarketing Preciso</h4>
             <p>
-              Reimpacte quem visitou sua página mas não reservou. 
+              Reimpacte quem visitou sua página mas não reservou.
               Recupere vendas com anúncios focados em quem já demonstrou interesse.
             </p>
           </div>
@@ -1657,7 +1700,7 @@
           <div>
             <h4>ROI Mensurável</h4>
             <p>
-              Descubra quanto cada reserva custou para o seu negócio. 
+              Descubra quanto cada reserva custou para o seu negócio.
               Otimize seu investimento e pare de queimar dinheiro em campanhas cegas.
             </p>
           </div>
@@ -1668,9 +1711,11 @@
       <div class="pixel-agency-box">
         <div class="pixel-agency-text">
           <i class="fa-solid fa-handshake-angle text-brand mr-3"></i>
-          <strong>Tem agência de marketing?</strong> A IA Reserva foi construída para trabalhar junto com seus especialistas.
+          <strong>Tem agência de marketing?</strong> A IA Reserva foi construída para trabalhar junto com seus
+          especialistas.
         </div>
-        <a href="#contato" class="pixel-agency-btn">Convidar Minha Agência</a>
+        <a href="https://wa.me/?text=Dá%20uma%20olhada%20no%20site%20da%20IA%20Reserva,%20eles%20possuem%20uma%20ferramenta%20de%20automação%20para%20restaurantes%20com%20pixel%20de%20rastreamento%20para%20agências:%20https://www.iareserva.com.br"
+          class="pixel-agency-btn" target="_blank">Compartilhar com Minha Agência</a>
       </div>
 
     </div>
@@ -1790,15 +1835,9 @@
 
         <!-- Social Icons -->
         <div class="flex gap-4">
-          <a href="#"
+          <a href="http://instagram.com/iareserva"
             class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-brand hover:text-white transition shadow-sm"><i
               class="fa-brands fa-instagram"></i></a>
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-brand hover:text-white transition shadow-sm"><i
-              class="fa-brands fa-whatsapp"></i></a>
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-brand hover:text-white transition shadow-sm"><i
-              class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
 
@@ -1836,6 +1875,12 @@
     updateSteps(); // Executa imediatamente para o primeiro
     setInterval(updateSteps, 2000); // Repete a cada 1 segundo
   </script>
+
+  <!-- Botão Flutuante WhatsApp -->
+  <a href="https://wa.me/5511988724201?text=Olá!%20Estava%20no%20site%20do%20IA%20Reserva%20e%20gostaria%20de%20mais%20informações"
+    class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
 </body>
 
